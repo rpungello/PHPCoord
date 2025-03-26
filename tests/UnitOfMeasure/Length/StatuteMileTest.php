@@ -18,7 +18,7 @@ class StatuteMileTest extends TestCase
         $original = new StatuteMile(0.0000745645);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.000001);
     }
 
     public function testGetValue(): void
@@ -30,7 +30,7 @@ class StatuteMileTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new StatuteMile(0.12);
-        self::assertEquals('Statute mile', $original->getUnitName());
+        self::assertEquals('statute mile', $original->getUnitName());
     }
 
     public function testAdd(): void

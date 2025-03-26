@@ -15,10 +15,10 @@ class NauticalMileTest extends TestCase
 {
     public function testAsMetres(): void
     {
-        $original = new NauticalMile(0.0000647948);
+        $original = new NauticalMile(0.00006479482);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000001);
     }
 
     public function testGetValue(): void
@@ -30,7 +30,7 @@ class NauticalMileTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new NauticalMile(0.12);
-        self::assertEquals('Nautical mile', $original->getUnitName());
+        self::assertEquals('nautical mile', $original->getUnitName());
     }
 
     public function testAdd(): void

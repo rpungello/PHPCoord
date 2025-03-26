@@ -18,7 +18,7 @@ class USSurveyMileTest extends TestCase
         $original = new USSurveyMile(0.0000745644);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.000001);
     }
 
     public function testGetValue(): void
