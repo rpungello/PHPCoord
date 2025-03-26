@@ -147,6 +147,21 @@ abstract class Length implements UnitOfMeasure
     public const EPSG_MILLIMETRE = 'urn:ogc:def:uom:EPSG::1025';
 
     /**
+     * Nautical mile.
+     */
+    public const EPSG_NAUTICAL_MILE = 'urn:ogc:def:uom:EPSG::9030';
+
+    /**
+     * Statute mile.
+     */
+    public const EPSG_STATUTE_MILE = 'urn:ogc:def:uom:EPSG::9093';
+
+    /**
+     * Nautical mile.
+     */
+    public const EPSG_US_SURVEY_MILE = 'urn:ogc:def:uom:EPSG::9035';
+
+    /**
      * @var array<string, array{name: string, fqcn?: class-string<self>, help: string}>
      */
     protected static array $sridData = [
@@ -229,6 +244,18 @@ abstract class Length implements UnitOfMeasure
         'urn:ogc:def:uom:EPSG::9301' => [
             'name' => 'British chain (Sears 1922 truncated)',
             'help' => 'Uses Sear\'s 1922 British yard-metre ratio (UoM code 9040) truncated to 6 significant figures; this truncated ratio (0.914398, UoM code 9099) then converted to other imperial units. 1 chSe(T) = 22 ydSe(T). Used in metrication of Malaya RSO grid.',
+        ],
+        'urn:ogc:def:uom:EPSG::9030' => [
+            'name' => 'Nautical mile',
+            'help' => 'Exactly 1,852 metres.',
+        ],
+        'urn:ogc:def:uom:EPSG::9093' => [
+            'name' => 'Statute mile',
+            'help' => '5,280 feet.',
+        ],
+        'urn:ogc:def:uom:EPSG::9035' => [
+            'name' => 'US survey mile',
+            'help' => 'Used in USA primarily for public lands cadastral work.',
         ],
     ];
 
