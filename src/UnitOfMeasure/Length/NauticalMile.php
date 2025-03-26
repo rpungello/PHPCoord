@@ -30,6 +30,6 @@ class NauticalMile extends Length
 
     public function getUnitName(): string
     {
-        return 'Nautical mile';
+        return 'nautical mile';
     }
 }
