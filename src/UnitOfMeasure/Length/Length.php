@@ -322,6 +322,9 @@ abstract class Length implements UnitOfMeasure
             self::EPSG_INDIAN_YARD => new IndianYard($measurement),
             self::EPSG_GOLD_COAST_FOOT => new GoldCoastFoot($measurement),
             self::EPSG_GERMAN_LEGAL_METRE => new GermanLegalMetre($measurement),
+            self::EPSG_NAUTICAL_MILE => new NauticalMile($measurement),
+            self::EPSG_STATUTE_MILE => new StatuteMile($measurement),
+            self::EPSG_US_SURVEY_MILE => new USSurveyMile($measurement),
             default => throw new UnknownUnitOfMeasureException($srid),
         };
     }
